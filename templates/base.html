@@ -24,28 +24,29 @@
         <h1 style="font-size:5rem;color:green;">Seamless <text
                 style="color:red;font-family: helvetica">E-shopping</text> experience!</h1>
         <div class="row">
-              <!-- <p>{% for product in products%}</p> -->
-            <div class="col">
+             {% for product in products %}
+            <div class="col d-flex justify-content-center mb-2">
                 <div class="card" style="width: 18rem;">
-                    <img src="{{product.url}}" style="height:10rem;" alt="">
+                    <img src="{{product.url}}" style="height:10rem;"
+                    style="height:10rem;object-fit: contain;"
+                    alt="">
                     <div class="card-body">
                         <h1 class="card-title">{{product.name}}</h1>
                         <h1 class="card-title">R{{product.price}}</h1>
                         <p class="card-text">{{product.description}}</p>
                         <p class="card-text">Only {{product.stock}} left in stock</p>
-                        <p class="card-text">Added on {{product.date_of_stock}}</p>
-                        <a href="#" class="btn btn-primary">Add to cart</a>
+                        <p class="card-text">Added on {{product.date_added}}</p>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
                         <a href="#" class="btn btn-danger btn-sm">Remove</a>
                         <a href="#" class="btn btn-secondary btn-sm">+</a>
                         <a href="#" class="btn btn-secondary btn-sm">-</a>
                     </div>
                 </div>
             </div>
-            <!-- <p>{% endfor %}</p> -->
-            
+            {% endfor %}
         </div>
+        {% endblock %}
     </div>
-    {% endblock %}
     {% include "footer.html" %}
 </body>
 </html>
