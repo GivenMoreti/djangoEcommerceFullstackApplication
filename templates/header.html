@@ -1,13 +1,38 @@
-
+{% block content %}
 <div class="container">
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">BarterBarter</a>
-        <a class="navbar-link" href="/products">Home</a>
-        <a class="navbar-link" href="/products">Buy</a>
-        <a class="navbar-link" href="/admin">Admin user</a>
-        <a class="navbar-link" href="#">item2</a>
-        
+        <a class="navbar-brand" href="#">BestBuy</a>
+        <a class="navbar-link" href="/products"><button class="btn btn-outline-warning ">Shop now</button></a>
+        <!-- <a class="navbar-link" href="/">Home</a> -->
+        <a class="navbar-link" href="/admin">Admin</a>
+        <a class="navbar-link" href="/discount">Discount</a>
+        <a class="navbar-link" href="/#">Cart</a>
+        <a class="navbar-link" href="/#">Jobs</a>
+        <a class="navbar-link" href="/#">Wishlist</a>
+        <a class="navbar-link" href="/#">Blog</a>
+        <a class="navbar-link" href="/#">Epay</a>
+        <a class="navbar-link" href="/#">
+         
+          <select name="" class="btn btn-outline-secondary" id="">
+            <option value="category" class="dropdown-item" default >Category</option>
+            <option class="dropdown-item">Electronic</option>
+            <option class="dropdown-item">Gardening</option>
+            <option class="dropdown-item">Automobile</option>
+            <option class="dropdown-item">Household</option>
+            <option class="dropdown-item">kids toys</option>
+            <option class="dropdown-item">Books</option>
+    
+          </select>
+         
+
+
+        </a>
+        <a class="navbar-link" href="/#">E-Barter</a>
+        <a class="navbar-link" href="/#">Bootcamp</a>
+        <a class="navbar-link" href="/#">News</a>
+
       </div>
     </nav>
   </div>
+{% endblock %}

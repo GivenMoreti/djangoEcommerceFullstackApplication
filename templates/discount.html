@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1 style="font-size:5rem;color:green">Buy one get <text style="color:red;">One free</text> on all of
+        these items</h1>
+
+    <div class="row">
+        {% for discount_product in discount_products %}
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{{discount_product.url}}" style="height:10rem;"alt="">
+                <div class="card-body">
+                    <h1 class="card-title">{{discount_product.name}}</h1>
+                    <h1 class="card-title">R{{discount_product.price}}</h1>
+                    <p class="card-text">{{discount_product.description}}</p>
+                    <p class="card-text">Only {{discount_product.stock}} left in stock</p>
+                    <p class="card-text">Added on {{discount_product.date_of_stock}}</p>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                    <a href="#" class="btn btn-danger btn-sm">Remove</a>
+                    <a href="#" class="btn btn-secondary btn-sm">+</a>
+                    <a href="#" class="btn btn-secondary btn-sm">-</a>
+                </div>
+            </div>     
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock%}

@@ -1,9 +1,25 @@
-{%extends 'index.html' %}
-{% block content%}
-<!-- 
-{{ import datetime }}
-{{year = datetime.datetime.now()}} -->
-<!-- print(x.strftime("%H")) -->
-    <p> Made with love {{year}} </p>
 
+{% block content%}
+
+    <p class="footer"> Made with love</p>
+    <p class="footer" id="year"></p>
+    <button class="btn btn-secondary btn-sm" id="up" style="float:right;margin:10px;">up</button>
 {% endblock%}
+<script>
+    const upButton =document.getElementById('up');
+    upButton.addEventListener('click', function(){
+        window.scrollTo({
+            top:0,
+            left:0,
+            behavior:"smooth"
+        })
+    })
+
+
+  document.querySelector('DOMContentLoaded',()=>{
+    document.addEventListener("onload", function(){
+        let year = document.getElementById('year');
+        year.innerHTML = '2022';
+    })
+ })
+</script>
